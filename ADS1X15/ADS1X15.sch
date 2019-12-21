@@ -1,18 +1,18 @@
 EESchema Schematic File Version 4
-LIBS:ADS1015-cache
+LIBS:ADS1X15-cache
 EELAYER 29 0
 EELAYER END
 $Descr User 7874 5118
 encoding utf-8
 Sheet 1 1
-Title "ADS1015 Based 12 Bit 4-Channel I2C ADC"
-Date "2019-12-10"
+Title "ADS1X15 Based 12/16 Bit 4-Channel I2C ADC"
+Date "2019-12-18"
 Rev "1"
 Comp "www.SirBoard.com"
 Comment1 "SirBoard"
 Comment2 "AnalogSensors"
-Comment3 "ADS1015"
-Comment4 ""
+Comment3 "ADS1115"
+Comment4 "ADS1015"
 $EndDescr
 $Comp
 L Device:R_US R1
@@ -161,18 +161,6 @@ VCC
 Wire Wire Line
 	4925 1150 4775 1150
 Connection ~ 4775 1150
-$Comp
-L Analog_ADC:ADS1015IDGS U1
-U 1 1 5DF0103B
-P 3175 2100
-F 0 "U1" H 3175 2778 50  0000 C CNN
-F 1 "ADS1015IDGS" H 3175 2688 50  0000 C CNN
-F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 3175 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ads1015.pdf" H 3125 1200 50  0001 C CNN
-F 4 "C193969" H 3175 2100 50  0001 C CNN "Part"
-	1    3175 2100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1975 1150 3175 1150
 Wire Wire Line
@@ -270,25 +258,6 @@ VCC_B
 Wire Wire Line
 	1950 1150 1975 1150
 Connection ~ 1975 1150
-$Comp
-L Connector_Generic:Conn_01x10 J3
-U 1 1 5DF54BA4
-P 6525 1300
-F 0 "J3" H 6604 1292 50  0000 L CNN
-F 1 "Conn_01x10" H 6604 1202 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 6525 1300 50  0001 C CNN
-F 3 "~" H 6525 1300 50  0001 C CNN
-	1    6525 1300
-	1    0    0    -1  
-$EndComp
-Text GLabel 6325 1500 0    50   Input ~ 0
-AIN0
-Text GLabel 6325 1600 0    50   Input ~ 0
-AIN1
-Text GLabel 6325 1100 0    50   Input ~ 0
-SCL
-Text GLabel 6325 1200 0    50   Input ~ 0
-SDA
 Text GLabel 4150 2300 2    50   Input ~ 0
 ADD
 Wire Wire Line
@@ -301,16 +270,8 @@ Wire Wire Line
 Connection ~ 4100 1900
 Wire Wire Line
 	4100 1900 4150 1900
-Text GLabel 6325 1400 0    50   Input ~ 0
-ADD
-Text GLabel 6325 1300 0    50   Input ~ 0
-ALERT
 Text GLabel 5575 2250 0    50   Input ~ 0
 ALERT
-Text GLabel 6325 1000 0    50   Input ~ 0
-GND
-Text GLabel 6325 900  0    50   Input ~ 0
-VCC
 Text GLabel 5575 2350 0    50   Input ~ 0
 GND
 Text GLabel 5575 2150 0    50   Input ~ 0
@@ -330,10 +291,6 @@ F 3 "~" H 5775 2350 50  0001 C CNN
 	1    5775 2350
 	1    0    0    -1  
 $EndComp
-Text GLabel 6325 1800 0    50   Input ~ 0
-AIN3
-Text GLabel 6325 1700 0    50   Input ~ 0
-AIN2
 Text GLabel 6350 2450 2    50   Input ~ 0
 AIN3
 Text GLabel 6350 2550 2    50   Input ~ 0
@@ -364,6 +321,18 @@ F 1 "MountingHole" H 1075 2055 50  0000 L CNN
 F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 975 2100 50  0001 C CNN
 F 3 "~" H 975 2100 50  0001 C CNN
 	1    975  2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_ADC:ADS1115IDGS ADS1X15
+U 1 1 5DF01CDA
+P 3175 2100
+F 0 "ADS1X15" H 3175 2778 50  0000 C CNN
+F 1 "ADS1115IDGS" H 3175 2688 50  0000 C CNN
+F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 3175 1600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ads1113.pdf" H 3125 1200 50  0001 C CNN
+F 4 "C37593" H 3175 2100 50  0001 C CNN "Part"
+	1    3175 2100
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
