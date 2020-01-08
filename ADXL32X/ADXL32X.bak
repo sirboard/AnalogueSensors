@@ -5,13 +5,13 @@ EELAYER END
 $Descr User 5197 4331
 encoding utf-8
 Sheet 1 1
-Title "ADXL327 Breakout with 5V Level Shift"
+Title "ADXL32X Breakout with 5V Level Shift"
 Date "2019-12-11"
 Rev "1"
 Comp "SirBoard"
-Comment1 "Analog Accelerometer with ±2g scale"
-Comment2 "±2g"
-Comment3 "ADXL327"
+Comment1 "Analog Accelerometer with ±2g,±5g OR ±16  scale"
+Comment2 "±5g, ±16g, ±2g"
+Comment3 "ADXL325, ADXL326, ADXL327"
 Comment4 ""
 $EndDescr
 Wire Wire Line
@@ -105,7 +105,7 @@ L ADXL32X:ADXL327 U2
 U 1 1 5DF1EFC3
 P 1400 1150
 F 0 "U2" H 1400 1763 50  0000 C CNN
-F 1 "ADXL327" H 1400 1673 50  0000 C CNN
+F 1 "ADXL32X" H 1400 1673 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-16-1EP_4x4mm_P0.65mm_EP2.1x2.1mm" H 1400 1725 50  0001 C CNN
 F 3 "" H 1400 1725 50  0001 C CNN
 	1    1400 1150
